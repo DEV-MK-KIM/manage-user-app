@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## User Management System
+This project was created to help admin to manage users in more simple way.
+
 
 ## Available Scripts
 
