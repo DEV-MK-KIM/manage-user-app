@@ -6,6 +6,19 @@ import TableHead from '@material-ui/core/TableHead';
 import TableBody from '@material-ui/core/TableBody';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
+import { withStyles } from '@material-ui/core/styles'
+import Paper from '@material-ui/core/Paper'
+
+const styles = theme =>({
+  root:{
+    width:'100%',
+    marginTop: theme.spacing.unit* 3,
+    overFlowX: 'auto'
+  },
+  table:{
+    minWidth: 1080
+  }
+})  
 
 const users = [
   {
@@ -34,12 +47,11 @@ const users = [
 class App extends Component {
   render() {
     return (
-      <div>
-        <Table>
+      <Paper className="classes.root">
+        <Table className="classes.table">
           <TableHead>
             <TableRow>
-              <TableCell>No.</TableCell>
-              <TableCell>ID</TableCell>
+              <TableCell>Id</TableCell>
               <TableCell>Image</TableCell>
               <TableCell>Name</TableCell>
               <TableCell>Gender</TableCell>
@@ -61,9 +73,9 @@ class App extends Component {
             })}
           </TableBody>
         </Table>
-      </div>
+      </Paper>
     );
   }
 }
 
-export default App;
+export default withStyles(styles)(App)
